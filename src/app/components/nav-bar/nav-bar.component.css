@@ -1,0 +1,143 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff; /* Fondo blanco limpio */
+  padding: 16px 24px; /* Padding más generoso */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+  border-radius: 12px; /* Bordes ligeramente más redondeados */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: padding 0.3s ease; /* Transición para el padding */
+}
+
+.logo-img {
+  width: 64px; /* Tamaño de logo más prominente */
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.1); /* Animación al hacer hover */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px; /* Más espacio entre los enlaces */
+  font-size: 17px; /* Tamaño de fuente ligeramente mayor */
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333333; /* Color gris oscuro */
+  font-weight: 700; /* Texto más negrita */
+  letter-spacing: 0.5px; /* Espaciado entre letras */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff477e; /* Acento en rosa */
+  transform: translateY(-2px); /* Ligeramente levantado al hacer hover */
+}
+
+.actions {
+  display: flex;
+  gap: 22px; /* Espacio más amplio */
+  align-items: center;
+}
+
+.network-select {
+  padding: 8px 14px; /* Padding mayor */
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background-color: #f0f0f0; /* Fondo claro */
+  font-size: 15px; /* Fuente un poco más grande */
+  cursor: pointer;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.network-select:hover {
+  border-color: #ff477e;
+  background-color: #ffe4e1; /* Fondo ligeramente rosado al hover */
+}
+
+.connect-wallet {
+  padding: 10px 22px;
+  background-color: #ff477e;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.connect-wallet:hover {
+  background-color: #e63672;
+  transform: translateY(-2px);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px; /* Ajusta el padding para una apariencia más consistente */
+  }
+
+  .logo-img {
+    width: 56px; /* Tamaño del logo ligeramente reducido */
+    margin-bottom: 16px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 16px; /* Espacio más reducido entre los enlaces */
+    width: 100%;
+    font-size: 16px; /* Tamaño de fuente ligeramente reducido */
+    text-align: left;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  .network-select {
+    width: 100%;
+    padding: 10px; /* Padding ajustado para mayor claridad */
+  }
+
+  .connect-wallet {
+    width: 100%;
+    padding: 12px; /* Padding ajustado para mayor claridad */
+    font-size: 18px; /* Tamaño de fuente más grande */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 12px; /* Ajusta el padding para pantallas muy pequeñas */
+  }
+
+  .logo-img {
+    width: 48px; /* Tamaño del logo aún más reducido */
+  }
+
+  .nav-links {
+    font-size: 14px; /* Tamaño de fuente aún más reducido */
+  }
+
+  .network-select {
+    padding: 8px; /* Ajusta el padding para pantallas pequeñas */
+  }
+
+  .connect-wallet {
+    padding: 10px; /* Ajusta el padding para pantallas pequeñas */
+    font-size: 16px; /* Tamaño de fuente ajustado */
+  }
+}
